@@ -1,52 +1,56 @@
-import logo from '../../assets/logo.png'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
+import { useState, useContext } from 'react';
 
-export default function SignUp(){
-    const [name,setName ]= useState('')
-    const [email,setEmail ]= useState('')
-    const [password,setPassword ]= useState('')
+import { AuthContext } from '../../contexts/auth';
 
-    function handleSubmit(e){
-e.preventDefault()
+export default function SignUp() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const { signUp, loadingAuth } = useContext(AuthContext);
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        
+        if (name.trim() !== '' && email.trim() !== '' && password.trim() !== '') {
+            await signUp(email, password, name);
+        }
     }
 
-if(name !==' ' && email !==' '&& password !== ''){
-    alert('Fazer Cadastro')
-}
+    return (
+        <div className='container-center'>
+            <div className='login'>
+                <div className='login-area'>
+                    <img src={logo} alt='Logo do Sistema' />
+                </div>
 
-    return(
-      <div className='container-center'>
-        <div className='login'>
-            <div className='login-area'>
-                <img src={logo} alt='Logo do Sistema' />
+                <form onSubmit={handleSubmit}>
+                    <h1>Criar uma conta</h1>
+                    <input
+                        type='text'
+                        placeholder='Nome Completo'
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                    <input
+                        type='text'
+                        placeholder='user@email.com'
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <input
+                        type='password'
+                        placeholder='*****'
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <button type='submit'>{loadingAuth ? 'Carregando...' : 'Cadastrar'}</button>
+                </form>
+
+                <Link to='/'>Já possui uma conta?</Link>
             </div>
-
-<form onSubmit={handleSubmit}>
-    <h1>Entrar</h1>
-    <input type='text'
-     placeholder='Nome Completo'
-     value={name}
-     onChange={(e)=>{setName(e.target.value)}}
-
-     />
-     <input type='text'
-     placeholder='user@email.com'
-     value={email}
-     onChange={(e)=>{setEmail(e.target.value)}}
-
-     />
-     <input type='password'
-     placeholder='*****'
-     value={password}
-     onChange={(e)=>{setPassword(e.target.value)}}
-     />
-<button type='submit'>cadastrar</button>
-</form>
-
-<Link to='/'>Já possui uma conta?</Link>
-
         </div>
-        </div>
-    )
+    );
 }
