@@ -25,7 +25,7 @@ export default function Header() {
             </Link>
             <Link to={'/profile'}>
             <FiSettings  color=' #FFF ' size={24}/>
-            configurações
+            Perfil
             </Link>
            
         </div>
