@@ -5,6 +5,7 @@ import SignIn from '../pages/SignIn'
 import SignUp from '../pages/SignUp'
 import Dashboard from '../pages/Dashboard'
 import Profile from '../pages/Profile'
+import Customers from '../pages/Customers'
 
 function RoutesApp(){
     return(
@@ -14,6 +15,7 @@ function RoutesApp(){
             
             <Route path='/dashboard' element={<Private><Dashboard/></Private>}/>
             <Route path='/profile' element={<Private><Profile/></Private>}/>
+            <Route path='/clientes' element={<Private><Customers/></Private>}/>
         </Routes>
     )
 }
