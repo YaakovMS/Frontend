@@ -1,29 +1,30 @@
-import logo from '../../assets/logo.png';
-import { Link } from 'react-router-dom';
-import { useState, useContext } from 'react';
-
-import { AuthContext } from '../../contexts/auth';
+import '../SignIn/signin.css'
+import { useState, useContext } from 'react'
+import logo07 from '../../assets/logo07.png'
+import { Link } from 'react-router-dom'
+import { AuthContext } from '../../contexts/auth'
 
 export default function SignUp() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-    const { signUp, loadingAuth } = useContext(AuthContext);
+    const { signUp, loadingAuth } = useContext(AuthContext)
 
     async function handleSubmit(e) {
-        e.preventDefault();
+        e.preventDefault()
         
         if (name.trim() !== '' && email.trim() !== '' && password.trim() !== '') {
-            await signUp(email, password, name);
+            await signUp(email, password, name)
         }
     }
 
     return (
         <div className='container-center'>
+            <div className='background-image'></div> {/* Adicionando a imagem de fundo */}
             <div className='login'>
                 <div className='login-area'>
-                    <img src={logo} alt='Logo do Sistema' />
+                    <img src={logo07} alt='Logo do Sistema' />
                 </div>
 
                 <form onSubmit={handleSubmit}>
@@ -52,5 +53,5 @@ export default function SignUp() {
                 <Link to='/'>Já possui uma conta?</Link>
             </div>
         </div>
-    );
+    )
 }

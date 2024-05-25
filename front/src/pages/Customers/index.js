@@ -51,7 +51,7 @@ export default function Customers(){
 
         <div className="container">
           <form className="form-profile" onSubmit={handleRegister}>
-              <label>Nome fantasia</label>
+              <label>Nome da Empresa</label>
               <input
                 type="text"
                 placeholder="Nome da empresa"

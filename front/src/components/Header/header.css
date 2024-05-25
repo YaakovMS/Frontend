@@ -2,15 +2,15 @@
     width: 200px;
     margin: 0;
     padding: 0;
-    background-color: #181c2e;
+    background-color: #1F112A;
     position: fixed;
     height: 100%;
     overflow: auto;
   }
   
   .sidebar div{
-    background: url('../../assets/cover.png');
-    background-color: #181c2e;
+    background: url('../../assets/bg02.jpg');
+    background-color: #1F112A;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

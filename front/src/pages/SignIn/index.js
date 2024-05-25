@@ -1,8 +1,9 @@
 import './signin.css'
 import { useState, useContext } from 'react'
-import logo from '../../assets/logo.png'
+import logo07 from '../../assets/logo07.png'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/auth'
+import bg02 from '../../assets/bg02.jpg'
 
 export default function SignIn() {
     const [email, setEmail] = useState('')
@@ -23,9 +24,10 @@ export default function SignIn() {
 
     return (
         <div className='container-center'>
+            <div className='background-image'></div> {/* Adicionando a imagem de fundo */}
             <div className='login'>
                 <div className='login-area'>
-                    <img src={logo} alt='Logo do Sistema' />
+                    <img src={logo07} alt='Logo do Sistema' />
                 </div>
 
                 <form onSubmit={handleSignIn}>
