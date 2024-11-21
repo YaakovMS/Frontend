@@ -8,7 +8,7 @@ Interface intuitiva e amigável, projetada para facilitar a navegação e o uso.
 Tecnologias
 React: Framework utilizado para o desenvolvimento da interface.
 Firebase: Backend para autenticação e armazenamento de dados.
-Instruções de Uso
+# Instruções de Uso
 Clone o repositório.
 Instale as dependências com:
 bash
@@ -19,5 +19,5 @@ bash
 Copiar código
 npm start  
 Protótipo no Figma
-Confira o design do projeto no Figma: Protótipo de Interface
+# Confira o design do projeto no Figma: Protótipo de Catálogo de Clientes e Serviços
 Link para o protótipo no figma https://www.figma.com/design/BPG3XkVGVJ7knaEYOc04Oc/Projeto-Interface?node-id=0-1&t=UJEvIC3P8YROK5Ox-1
