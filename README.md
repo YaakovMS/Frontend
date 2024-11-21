@@ -10,13 +10,10 @@ React: Framework utilizado para o desenvolvimento da interface.
 Firebase: Backend para autenticação e armazenamento de dados.
 # Instruções de Uso
 Clone o repositório.
+
 Instale as dependências com:
-bash
-Copiar código
-npm install  
+npm install
 Inicie o projeto com:
-bash
-Copiar código:
 npm start  
 Protótipo no Figma
 # Confira o design do projeto no Figma: Protótipo de Catálogo de Clientes e Serviços
