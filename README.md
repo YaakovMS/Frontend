@@ -10,7 +10,6 @@ React: Framework utilizado para o desenvolvimento da interface.
 Firebase: Backend para autenticação e armazenamento de dados.
 # Instruções de Uso
 Clone o repositório.
-
 Instale as dependências com:
 npm install
 Inicie o projeto com:
