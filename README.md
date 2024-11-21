@@ -16,7 +16,7 @@ Copiar código
 npm install  
 Inicie o projeto com:
 bash
-Copiar código
+Copiar código:
 npm start  
 Protótipo no Figma
 # Confira o design do projeto no Figma: Protótipo de Catálogo de Clientes e Serviços
