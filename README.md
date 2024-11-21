@@ -1,7 +1,7 @@
 # Catálogo de Clientes e Serviços - Frontend
 Projeto de desenvolvimento frontend para catalogar clientes e os serviços prestados, utilizando React e Firebase.
 
-Funcionalidades
+# Funcionalidades
 Gerenciamento de clientes.
 Registro e acompanhamento de serviços prestados.
 Interface intuitiva e amigável, projetada para facilitar a navegação e o uso.
